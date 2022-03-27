@@ -24,8 +24,8 @@ extension ViewController {
                 }
             }
             request.maximumObservations = 0
-            request.minimumConfidence = 0.1
-            request.minimumAspectRatio = 0.1
+            request.minimumConfidence = 0.0
+            request.minimumAspectRatio = 0.5
             return request
         }
         
