@@ -10,8 +10,8 @@ import Vision
 
 extension ViewController {
     func performVisionRequest(image: UIImage) {
-        var detectionRequest: VNDetectRectanglesRequest {
-            let request = VNDetectRectanglesRequest { (request, error) in
+        var detectionRequest: VNDetectFaceRectanglesRequest {
+            let request = VNDetectFaceRectanglesRequest { (request, error) in
                 if let detectError = error as NSError? {
                     print(detectError)
                     return
@@ -23,9 +23,9 @@ extension ViewController {
                     self.visualizeObservations(observations)
                 }
             }
-            request.maximumObservations = 0
-            request.minimumConfidence = 0.0
-            request.minimumAspectRatio = 0.5
+//            request.maximumObservations = 0
+//            request.minimumConfidence = 0.0
+//            request.minimumAspectRatio = 0.5
             return request
         }
         
